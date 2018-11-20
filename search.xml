@@ -3,34 +3,6 @@
   
     
     <entry>
-      <title>My New Post</title>
-      <link href="/2018/11/19/My-New-Post/"/>
-      <url>/2018/11/19/My-New-Post/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 前端 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2018/11/19/hello-world/"/>
-      <url>/2018/11/19/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. </p>]]></content>
-      
-      
-      
-    </entry>
-    
-    <entry>
       <title>七种内排序</title>
       <link href="/2018/10/24/sort/"/>
       <url>/2018/10/24/sort/</url>
