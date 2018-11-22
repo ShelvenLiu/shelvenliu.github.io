@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Shelven&#39;s Blog</title>
+  
+  <subtitle>热爱技术，但不局限于技术</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-11-20T08:44:24.212Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>shelven</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>七种内排序</title>
+    <link href="http://yoursite.com/2018/10/24/sort/"/>
+    <id>http://yoursite.com/2018/10/24/sort/</id>
+    <published>2018-10-23T16:00:00.000Z</published>
+    <updated>2018-11-20T08:44:24.212Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code&gt;//冒泡排序
+public static void BubbleSort(int[] array){
+    for(int i=0;i&amp;lt;array.length-1;i++){
+        boolean flag=false;//设置是否发生交
+      
+    
+    </summary>
+    
+    
+      <category term="AL" scheme="http://yoursite.com/tags/AL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为博客添加Gitment评论系统</title>
+    <link href="http://yoursite.com/2018/10/08/Gitment/"/>
+    <id>http://yoursite.com/2018/10/08/Gitment/</id>
+    <published>2018-10-07T16:00:00.000Z</published>
+    <updated>2018-11-20T08:45:12.513Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;Gitment，一款由国内大神imsun开发的基于github issues的评论系统, 具体介绍请看&lt;a href=&quot;github.com/imsun/gitment&quot;&gt;项目主页&lt;/a&gt;。下面将介绍安装评论系统的具体步骤。&lt;/p&gt;
+&lt;/block
+      
+    
+    </summary>
+    
+    
+      <category term="Gitment" scheme="http://yoursite.com/tags/Gitment/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>初探Markdown语法</title>
+    <link href="http://yoursite.com/2018/10/07/Markdown/"/>
+    <id>http://yoursite.com/2018/10/07/Markdown/</id>
+    <published>2018-10-06T16:00:00.000Z</published>
+    <updated>2018-11-20T08:44:51.852Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;HTML(HyperText Markup Language)作为一种超文本标记语言(markup language)应运而生，无数的网页从此有了主次分明，层次清晰的格式。如果将HTML比作一架重机枪，那么Markdown就是一把手枪，满足了主要的文本格式标记的需求，可是操
+      
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用Jekyll和Github pages免费搭建个人博客</title>
+    <link href="http://yoursite.com/2018/08/05/Github%20pages%E5%92%8CJekyll%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2018/08/05/Github pages和Jekyll免费搭建个人博客/</id>
+    <published>2018-08-04T16:00:00.000Z</published>
+    <updated>2018-11-20T08:45:24.774Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;经过各种查资料，踩过各种坑，一个基本的博客总算形成了。&lt;br&gt;&lt;br&gt;&lt;br&gt;建博客的原因，一方面怕所学知识败给了遗忘，索性就把知识记录到博客上，等以后忘记时还可以翻翻；另一方面就是专业使然，多学一个技能，而且整个搭建过程还是免费的。下面就是我的搭建过程。&lt;br&gt;&lt;br&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="jekyll" scheme="http://yoursite.com/tags/jekyll/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>让Git来高效管理你的项目</title>
+    <link href="http://yoursite.com/2018/07/13/Git/"/>
+    <id>http://yoursite.com/2018/07/13/Git/</id>
+    <published>2018-07-12T16:00:00.000Z</published>
+    <updated>2018-11-20T08:45:39.711Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-Git介绍&quot;&gt;&lt;a href=&quot;#1-Git介绍&quot; class=&quot;headerlink&quot; title=&quot;1.Git介绍&quot;&gt;&lt;/a&gt;1.Git介绍&lt;/h3&gt;&lt;p&gt;　　Git是一个开源的分布式版本控制系统（无联网也能正常工作），用于敏捷高效地处理任何或小或大的项目
+      
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言二叉查找树</title>
+    <link href="http://yoursite.com/2018/07/04/Bitree/"/>
+    <id>http://yoursite.com/2018/07/04/Bitree/</id>
+    <published>2018-07-03T16:00:00.000Z</published>
+    <updated>2018-11-20T08:45:48.358Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;BST&quot;&gt;&lt;a href=&quot;#BST&quot; class=&quot;headerlink&quot; title=&quot;BST&quot;&gt;&lt;/a&gt;BST&lt;/h2&gt;&lt;h3 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概
+      
+    
+    </summary>
+    
+    
+      <category term="AL" scheme="http://yoursite.com/tags/AL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二十几岁的年纪</title>
+    <link href="http://yoursite.com/2018/01/30/MyTwenties/"/>
+    <id>http://yoursite.com/2018/01/30/MyTwenties/</id>
+    <published>2018-01-30T11:43:54.000Z</published>
+    <updated>2018-11-22T11:27:25.667Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;十字出头的年龄悄然间画上了句号，或懵懂或迷茫，或犹豫或彷徨，或开心或放荡，总之在你某个猝不及防的夜晚，你就真正成为了一个思想独立法律独立的人了，这种感觉像放任的自由,同时也像责任约束下畏畏缩缩的逃兵。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;img src=&quot;/images/pos
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+</feed>
