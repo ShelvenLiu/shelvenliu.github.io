@@ -510,20 +510,43 @@
 <p>Markdown 旨在简洁、高效，也由于 Markdown 的易读易写，人们用不同的编程语言实现了多个版本的解析器和生成器。这就导致了目前不同的 Markdown 工具集成了不同的功能（基础功能大致相同），例如流程图与时序图，复杂表格与复杂公式的呈现。</p>
 <hr>
 <h2 id="2-Markdown基本语法规则"><a href="#2-Markdown基本语法规则" class="headerlink" title="2. Markdown基本语法规则"></a>2. Markdown基本语法规则</h2><h3 id="2-1-标题"><a href="#2-1-标题" class="headerlink" title="2.1 标题"></a>2.1 标题</h3><p>Markdown通过在行首添加1-6个<code>#</code>符号来定义不同级别的标题，最多到六级标题。注意<code>#</code>后需要加一个空格。</p>
-<p><strong>书写格式如下：</strong><br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#h1</span><br><span class="line">##h2二级标题</span><br><span class="line">######h6六级标题</span><br></pre></td></tr></table></figure></p>
-<p>特别的，还可使用<code>=</code>(高阶标题)和<code>-</code>(次阶标题)标记一级和二级标题。 </p>
-<p><strong>书写格式如下：</strong><br><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">这是高阶标题(效果和一级标题一样)</span><br><span class="line">=</span><br><span class="line">这是次阶标题(效果和二级标题一样)</span><br><span class="line">-</span><br></pre></td></tr></table></figure></p>
-<p><strong>注意：</strong><br><code>=</code>和<code>-</code>标记标题时，<code>=</code>和<code>-</code>的个数在不同的编辑器中都有不同，只要1个或者大于等于两个又或者必须要三个(含三个)以上的才可以表示，这倒不是多大的问题了，简单试试就知道了。</p>
+<p><strong>书写格式如下：</strong></p>
+<pre><code>#h1
+##h2二级标题
+######h6六级标题
+</code></pre><p>特别的，还可使用<code>=</code>(高阶标题)和<code>-</code>(次阶标题)标记一级和二级标题。 </p>
+<p><strong>书写格式如下：</strong></p>
+<pre><code>这是高阶标题(效果和一级标题一样)
+=
+这是次阶标题(效果和二级标题一样)
+-
+</code></pre><p><strong>注意：</strong><br><code>=</code>和<code>-</code>标记标题时，<code>=</code>和<code>-</code>的个数在不同的编辑器中都有不同，只要1个或者大于等于两个又或者必须要三个(含三个)以上的才可以表示，这倒不是多大的问题了，简单试试就知道了。</p>
 <h3 id="2-2-加粗、斜体和删除线"><a href="#2-2-加粗、斜体和删除线" class="headerlink" title="2.2 加粗、斜体和删除线"></a>2.2 加粗、斜体和删除线</h3><ul>
 <li>markdown使用<code>*</code>和<code>_</code>来强调文本，使用一个<code>*</code>和<code>_</code>包围的文本会被转化为斜体，而用两个<code>*</code>和<code>_</code>包围的文本则会被转化成加粗，使用两个<code>~</code>包围的文本会被转化为删除线。</li>
 <li>但是如果你的 <code>*</code> 、<code>_</code>和 <code>~</code> 两边都有空白的话，它们就只会被当成普通的符号</li>
 <li>如果要在文字前后直接插入普通的星号或底线，你可以用反斜线</li>
 </ul>
-<p><strong>书写格式如下：</strong><br><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*斜体文字*</span><br><span class="line"><span class="symbol">_</span>斜体文字<span class="symbol">_</span></span><br><span class="line">**加粗文字**</span><br><span class="line"><span class="symbol">__</span>加粗文字<span class="symbol">__</span></span><br><span class="line">~~删除内容~~</span><br></pre></td></tr></table></figure></p>
-<p><strong>解析效果如下：</strong><br><em>斜体文字</em><br><em>斜体文字</em><br><strong>加粗文字</strong><br><strong>加粗文字</strong><br><del>删除内容</del>  </p>
+<p><strong>书写格式如下：</strong></p>
+<pre><code>*斜体文字*
+_斜体文字_
+**加粗文字**
+__加粗文字__
+~~删除内容~~
+</code></pre><p><strong>解析效果如下：</strong><br><em>斜体文字</em><br><em>斜体文字</em><br><strong>加粗文字</strong><br><strong>加粗文字</strong><br><del>删除内容</del>  </p>
 <h3 id="2-3-列表"><a href="#2-3-列表" class="headerlink" title="2.3 列表"></a>2.3 列表</h3><p>Markdown支持无序列表和有序列表。无序列表可以使用<code>*</code>，<code>+</code>，<code>-</code>三者中任意符号来标记；有序列表则使用<code>数字</code>加<code>.</code>来标记。<strong>注意标记后面需要加上一个空格，有序列表的数字会被按顺序自动更正</strong>。</p>
-<p><strong>书写格式如下：</strong><br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**有序列表**</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">1. </span>第一点</span><br><span class="line"><span class="bullet">2. </span>第二点</span><br><span class="line"><span class="bullet">4. </span>第三点</span><br><span class="line"></span><br><span class="line"><span class="strong">**无序列表**</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>这是无序列表项目</span><br><span class="line"><span class="bullet">+ </span>这是无序列表项目</span><br><span class="line"><span class="bullet">* </span>这是无序列表项目</span><br></pre></td></tr></table></figure></p>
-<p><strong>解析效果如下：</strong><br><strong>有序列表</strong></p>
+<p><strong>书写格式如下：</strong></p>
+<pre><code>**有序列表**
+
+1. 第一点
+2. 第二点
+4. 第三点
+
+**无序列表**
+
+- 这是无序列表项目
++ 这是无序列表项目
+* 这是无序列表项目
+</code></pre><p><strong>解析效果如下：</strong><br><strong>有序列表</strong></p>
 <ol>
 <li>第一点</li>
 <li>第二点</li>
@@ -540,14 +563,20 @@
 <li>这是无序列表项目</li>
 </ul>
 <h3 id="2-4-引用"><a href="#2-4-引用" class="headerlink" title="2.4 引用"></a>2.4 引用</h3><p>在段落前添加一个<code>&gt;</code>符号即可将该段落标记为引用，注意<code>&gt;</code>后需要添加一个空格。</p>
-<p><strong>书写格式如下：</strong><br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 这是引用</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>解析效果如下：</strong></p>
+<p><strong>书写格式如下：</strong></p>
+<pre><code>&gt; 这是引用
+</code></pre><p><strong>解析效果如下：</strong></p>
 <blockquote>
 <p>这是引用</p>
 </blockquote>
 <p>繁琐一点，你也可以在引用段落的每一行都加上<code>&gt;</code>符号。并且<code>&gt;</code>可以迭代使用，表示引用中的引用效果。</p>
-<p><strong>书写格式如下：</strong><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; 这是一级引用</span><br><span class="line"><span class="meta">&gt;&gt;</span> 这是二级引用</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; 这是三级引用</span><br><span class="line"></span><br><span class="line">&gt; 这是一级引用</span><br></pre></td></tr></table></figure></p>
-<p><strong>解析效果如下：</strong></p>
+<p><strong>书写格式如下：</strong></p>
+<pre><code>&gt; 这是一级引用
+&gt;&gt; 这是二级引用
+&gt;&gt;&gt; 这是三级引用
+
+&gt; 这是一级引用
+</code></pre><p><strong>解析效果如下：</strong></p>
 <blockquote>
 <p>这是一级引用</p>
 <blockquote>
@@ -560,8 +589,12 @@
 <blockquote>
 <p>这是一级引用</p>
 </blockquote>
-<p>再如：<strong>书写格式若如下：</strong><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; 这是一级引用</span><br><span class="line"><span class="meta">&gt;&gt;</span> 这是二级引用</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; 这是三级引用</span><br><span class="line">&gt; 这是一级引用</span><br></pre></td></tr></table></figure></p>
-<p><strong>解析效果则：</strong></p>
+<p>再如：<strong>书写格式若如下：</strong></p>
+<pre><code>&gt; 这是一级引用
+&gt;&gt; 这是二级引用
+&gt;&gt;&gt; 这是三级引用
+&gt; 这是一级引用
+</code></pre><p><strong>解析效果则：</strong></p>
 <blockquote>
 <p>这是一级引用</p>
 <blockquote>
@@ -576,19 +609,31 @@
 <li>引用完之后，必须再空一行，重新一个新的开始，否则，以后的文字都将在引用的范围内，不要问我为什么，实践出真知。</li>
 <li>引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等(见下面的解析效果)：</li>
 </ul>
-<p>即，<strong>书写格式如下：</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> <span class="comment">## 这是一个标题。</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 1.   这是第一行列表项。</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 2.   这是第二行列表项。</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 给出一些例子代码：</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">     <span class="built_in">return</span> shell_exec(<span class="string">"echo <span class="variable">$input</span> | <span class="variable">$markdown_script</span>"</span>);</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>解析效果则：</strong></p>
+<p>即，<strong>书写格式如下：</strong></p>
+<pre><code>&gt; ## 这是一个标题。
+&gt;
+&gt; 1.   这是第一行列表项。
+&gt; 2.   这是第二行列表项。
+&gt;
+&gt; 给出一些例子代码：
+&gt;
+&gt;     return shell_exec(&quot;echo $input | $markdown_script&quot;);
+</code></pre><p><strong>解析效果则：</strong></p>
 <blockquote>
 <h2 id="这是一个标题。"><a href="#这是一个标题。" class="headerlink" title="这是一个标题。"></a>这是一个标题。</h2><ol>
 <li>这是第一行列表项。</li>
 <li>这是第二行列表项。</li>
 </ol>
 <p>给出一些例子代码：</p>
-<pre><code>return shell_exec(&quot;echo $input | $markdown_script&quot;);
+<pre><code>  return shell_exec(&quot;echo $input | $markdown_script&quot;);
 </code></pre></blockquote>
 <h3 id="2-5-分割线"><a href="#2-5-分割线" class="headerlink" title="2.5 分割线"></a>2.5 分割线</h3><p>分割线最常使用就是三个或以上*，还可以使用-和_。 </p>
-<p><strong>书写格式如下：</strong><br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">***</span></span><br><span class="line"><span class="string">___</span></span><br><span class="line"></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>解析效果如下*</strong></p>
+<p><strong>书写格式如下：</strong></p>
+<pre><code>***
+___
+
+---
+</code></pre><p><strong>解析效果如下*</strong></p>
 <hr>
 <hr>
 <hr>
@@ -598,8 +643,30 @@
 <li>使用<code>---</code>作为水平分割线时，要在它的前后都空一行，防止<code>---</code>被当成标题标记的表示方式。</li>
 </ul>
 <h3 id="2-6-插入链接"><a href="#2-6-插入链接" class="headerlink" title="2.6 插入链接"></a>2.6 插入链接</h3><p>markdown文本中插入链接非常方便，有文内链接和引用链接两种方式。注意如果链接的是本地资源，则链接地址为当地资源的路径。</p>
-<p><strong>书写格式如下：</strong><br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**文内链接**</span></span><br><span class="line">这是一个文内链接的[<span class="string">例子</span>](<span class="link">http://example.com/ "鼠标悬浮此处显示的标题"</span>)。</span><br><span class="line">[<span class="string">这个</span>](<span class="link">http://example.net/</span>)链接在鼠标悬浮时没有标题。</span><br><span class="line">[<span class="string">这个</span>](<span class="link">/about/</span>)链接是本地资源。</span><br><span class="line"></span><br><span class="line"><span class="strong">**引用链接**</span></span><br><span class="line">这是一个引用链接的[<span class="string">例子</span>][<span class="symbol">id</span>]。</span><br><span class="line">[<span class="symbol">id</span>]: <span class="link">http://example.com/  "鼠标悬浮标题（可选）"</span></span><br><span class="line"></span><br><span class="line"><span class="strong">**注意，这里的id没有大小写区分，如果省略id，则前面方括号的内容会被用作id。**</span></span><br><span class="line"></span><br><span class="line">我常用的网站包括[<span class="string">Google</span>][<span class="symbol">1</span>] ，[<span class="string">Yahoo</span>][<span class="symbol">2</span>] 和 [<span class="string">MSN</span>][<span class="symbol">3</span>]。</span><br><span class="line">[<span class="symbol">1</span>]:	<span class="link">http://google.com/        "Google"</span></span><br><span class="line">[<span class="symbol">2</span>]:	<span class="link">http://search.yahoo.com/  "Yahoo Search"</span></span><br><span class="line">[<span class="symbol">3</span>]:	<span class="link">http://search.msn.com/    "MSN Search"</span></span><br><span class="line"></span><br><span class="line"><span class="strong">**也可以写成**</span></span><br><span class="line"></span><br><span class="line">我常用的网站包括[<span class="string">Google</span>][<span class="symbol"></span>]，[<span class="string">Yahoo</span>][<span class="symbol"></span>]和[<span class="string">MSN</span>][<span class="symbol"></span>]。</span><br><span class="line">[<span class="symbol">google</span>]: <span class="link">http://google.com/        "Google"</span></span><br><span class="line">[<span class="symbol">yahoo</span>]:  <span class="link">http://search.yahoo.com/  "Yahoo Search"</span></span><br><span class="line">[<span class="symbol">msn</span>]:    <span class="link">http://search.msn.com/    "MSN Search"</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>解析效果如下：</strong>  </p>
+<p><strong>书写格式如下：</strong></p>
+<pre><code>**文内链接**
+这是一个文内链接的[例子](http://example.com/ &quot;鼠标悬浮此处显示的标题&quot;)。
+[这个](http://example.net/)链接在鼠标悬浮时没有标题。
+[这个](/about/)链接是本地资源。
+
+**引用链接**
+这是一个引用链接的[例子][id]。
+[id]: http://example.com/  &quot;鼠标悬浮标题（可选）&quot;
+
+**注意，这里的id没有大小写区分，如果省略id，则前面方括号的内容会被用作id。**
+
+我常用的网站包括[Google][1] ，[Yahoo][2] 和 [MSN][3]。
+[1]:    http://google.com/        &quot;Google&quot;
+[2]:    http://search.yahoo.com/  &quot;Yahoo Search&quot;
+[3]:    http://search.msn.com/    &quot;MSN Search&quot;
+
+**也可以写成**
+
+我常用的网站包括[Google][]，[Yahoo][]和[MSN][]。
+[google]: http://google.com/        &quot;Google&quot;
+[yahoo]:  http://search.yahoo.com/  &quot;Yahoo Search&quot;
+[msn]:    http://search.msn.com/    &quot;MSN Search&quot;
+</code></pre><p><strong>解析效果如下：</strong>  </p>
 <p><strong>文内链接</strong><br>这是一个文内链接的<a href="http://example.com/" title="鼠标悬浮此处显示的标题" target="_blank" rel="noopener">例子</a>。<br><a href="http://example.net/" target="_blank" rel="noopener">这个</a>链接在鼠标悬浮时没有标题。<br><a href="/about/">这个</a>链接是本地资源。  </p>
 <p><strong>引用链接</strong><br>这是一个引用链接的[例子][id]。<br>[id]: <a href="http://example.com/" target="_blank" rel="noopener">http://example.com/</a>  “鼠标悬浮标题（可选）”  </p>
 <p><strong>注意，这里的id没有大小写区分，如果省略id，则前面方括号的内容会被用作id。</strong>  </p>
@@ -608,10 +675,44 @@
 <p>我常用的网站包括<a href="http://google.com/" title="Google" target="_blank" rel="noopener">Google</a>，<a href="http://search.yahoo.com/" title="Yahoo Search" target="_blank" rel="noopener">Yahoo</a>和<a href="http://search.msn.com/" title="MSN Search" target="_blank" rel="noopener">MSN</a>。  </p>
 <p><strong>注意：</strong></p>
 <ul>
-<li>上述的<figure class="highlight plain"><figcaption><span>http://google.com/  "Google"、[google]:</span><a href="http://google.com/" target="_blank" rel="noopener">"Google"```等等之类不会出现在区块中。 </a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">* 文内链接和引用链接显示效果是一样的。但是在编辑状态下的使用情况不一样。文内链接紧跟链接文字，可以在看到链接文字的同时清楚的知道链接地址，但是不便于多次重复利用。引用链接可以重复使用，但一般都是将一些链接放在一起统一管理，如一段文字后面或文章结尾，因此在找到链接和链接文字的对应关系上有些麻烦。各有利弊了，分情况使用。</span><br><span class="line">* 我原以为所有Markdown编辑器都支持这种引用链接的，经过测试，发现CSDN中是支持的，但后来惊奇地发现，引用链接这种方式在[简书](https://www.jianshu.com/)的Markdown编辑工具下以及在我的这个GitHub Pages中是无法解析的。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 2.7 插入图片  </span><br><span class="line">* 插入图片和插入链接非常类似，只是在方括号前多一个`!`。  </span><br><span class="line"></span><br><span class="line">插入图片**语法**：`![Alt text](/path/to/img.jpg &quot;Optional title&quot;)`  </span><br><span class="line">&gt;* Alt text为如果图片无法显示时显示的文字。  </span><br><span class="line">&gt;* /path/to/img.jpg为图片所在路径。  </span><br><span class="line">&gt;* Optional title为显示标题。显示效果为在你将鼠标放到图片上后，会显示一个小框提示，提示的内容就是Optional title。  </span><br><span class="line"></span><br><span class="line">**书写格式如下：**</span><br></pre></td></tr></table></figure></li>
+<li>上述的<code>[1]: http://google.com/  &quot;Google&quot;、[google]: http://google.com/        &quot;Google&quot;</code>等等之类不会出现在区块中。 </li>
+<li>文内链接和引用链接显示效果是一样的。但是在编辑状态下的使用情况不一样。文内链接紧跟链接文字，可以在看到链接文字的同时清楚的知道链接地址，但是不便于多次重复利用。引用链接可以重复使用，但一般都是将一些链接放在一起统一管理，如一段文字后面或文章结尾，因此在找到链接和链接文字的对应关系上有些麻烦。各有利弊了，分情况使用。</li>
+<li>我原以为所有Markdown编辑器都支持这种引用链接的，经过测试，发现CSDN中是支持的，但后来惊奇地发现，引用链接这种方式在<a href="https://www.jianshu.com/" target="_blank" rel="noopener">简书</a>的Markdown编辑工具下以及在我的这个GitHub Pages中是无法解析的。</li>
 </ul>
-<p><strong>文内链接：</strong><br><img src="http://www.turingbook.com/Content/img/Turing.Gif" alt="图灵社区"></p>
-<p><strong>引用链接</strong><br>[图灵社区][1]<br>![图灵社区Logo][2]<br>[1]: <a href="http://www.ituring.com.cn" target="_blank" rel="noopener">http://www.ituring.com.cn</a><br>[2]: <a href="http://www.turingbook.com/Content/img/Turing.Gif" target="_blank" rel="noopener">http://www.turingbook.com/Content/img/Turing.Gif</a><br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="strong">**解析效果如下：**</span>  </span><br><span class="line"><span class="strong">**文内链接：**</span>  </span><br><span class="line">![<span class="string">图灵社区</span>](<span class="link">http://www.turingbook.com/Content/img/Turing.Gif</span>)   </span><br><span class="line"></span><br><span class="line"><span class="strong">**引用链接**</span>  </span><br><span class="line">[<span class="string">图灵社区</span>][<span class="symbol">1</span>]  </span><br><span class="line">![<span class="string">图灵社区Logo</span>][<span class="symbol">2</span>]  </span><br><span class="line">[<span class="symbol">1</span>]: <span class="link">http://www.ituring.com.cn   </span></span><br><span class="line">[<span class="symbol">2</span>]: <span class="link">http://www.turingbook.com/Content/img/Turing.Gif  </span></span><br><span class="line"></span><br><span class="line"><span class="strong">**注意：**</span>    </span><br><span class="line"><span class="bullet">* </span>同上节链接一样，引用链接这种方式在[<span class="string">简书</span>](<span class="link">https://www.jianshu.com/</span>)的Markdown编辑工具下以及我的这个GitHub Pages中是无法解析的。    </span><br><span class="line"><span class="bullet">* </span>同时，注意一点：到目前为止， Markdown 还没有办法指定图片的宽高。    </span><br><span class="line"></span><br><span class="line"><span class="section">### 2.8 表格  </span></span><br><span class="line">表格的书写格式一目了然，还是很方便简洁的。  </span><br><span class="line"></span><br><span class="line"><span class="strong">**书写格式如下：**</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="2-7-插入图片"><a href="#2-7-插入图片" class="headerlink" title="2.7 插入图片"></a>2.7 插入图片</h3><ul>
+<li>插入图片和插入链接非常类似，只是在方括号前多一个<code>!</code>。  </li>
+</ul>
+<p>插入图片<strong>语法</strong>：<code>![Alt text](/path/to/img.jpg &quot;Optional title&quot;)</code>  </p>
+<blockquote>
+<ul>
+<li>Alt text为如果图片无法显示时显示的文字。  </li>
+<li>/path/to/img.jpg为图片所在路径。  </li>
+<li>Optional title为显示标题。显示效果为在你将鼠标放到图片上后，会显示一个小框提示，提示的内容就是Optional title。  </li>
+</ul>
+</blockquote>
+<p><strong>书写格式如下：</strong>  </p>
+<pre><code>**文内链接：**
+![图灵社区](http://www.turingbook.com/Content/img/Turing.Gif)
+
+**引用链接**
+[图灵社区][1]
+![图灵社区Logo][2]
+[1]: http://www.ituring.com.cn
+[2]: http://www.turingbook.com/Content/img/Turing.Gif
+</code></pre><p><strong>解析效果如下：</strong><br><strong>文内链接：</strong><br><img src="http://www.turingbook.com/Content/img/Turing.Gif" alt="图灵社区">   </p>
+<p><strong>引用链接</strong><br>[图灵社区][1]<br>![图灵社区Logo][2]<br>[1]: <a href="http://www.ituring.com.cn" target="_blank" rel="noopener">http://www.ituring.com.cn</a><br>[2]: <a href="http://www.turingbook.com/Content/img/Turing.Gif" target="_blank" rel="noopener">http://www.turingbook.com/Content/img/Turing.Gif</a>  </p>
+<p><strong>注意：</strong>    </p>
+<ul>
+<li>同上节链接一样，引用链接这种方式在<a href="https://www.jianshu.com/" target="_blank" rel="noopener">简书</a>的Markdown编辑工具下以及我的这个GitHub Pages中是无法解析的。    </li>
+<li>同时，注意一点：到目前为止， Markdown 还没有办法指定图片的宽高。    </li>
+</ul>
+<h3 id="2-8-表格"><a href="#2-8-表格" class="headerlink" title="2.8 表格"></a>2.8 表格</h3><p>表格的书写格式一目了然，还是很方便简洁的。  </p>
+<p><strong>书写格式如下：</strong>  </p>
+<pre><code>| 左对齐 | 中间对齐 | 右对齐 |
+| :-     |  :-:     |   -:   |
+| 左1    |  中1     |  右1   |
+| 左2    |  中2     |  右3   |
+</code></pre><p><strong>解析效果如下：</strong>  </p>
 <table>
 <thead>
 <tr>
@@ -633,9 +734,24 @@
 </tr>
 </tbody>
 </table>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="symbol">*</span><span class="symbol">*</span>解析效果如下：<span class="symbol">*</span><span class="symbol">*</span>  </span><br><span class="line"></span><br><span class="line">|<span class="string"> 左对齐 </span>|<span class="string"> 中间对齐 </span>|<span class="string"> 右对齐 </span>|</span><br><span class="line">|<span class="string"> :-     </span>|<span class="string">  :-:     </span>|<span class="string">   -:   </span>|</span><br><span class="line">|<span class="string"> 左1    </span>|<span class="string">  中1     </span>|<span class="string">  右1   </span>|</span><br><span class="line">|<span class="string"> 左2    </span>|<span class="string">  中2     </span>|<span class="string">  右3   </span>|</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#### 2.9 换行</span></span><br><span class="line">使用html标签`<span class="variable">&lt;br/&gt;</span>`、`<span class="variable">&lt;br&gt;</span>`换行</span><br><span class="line"></span><br><span class="line"><span class="symbol">*</span><span class="symbol">*</span>书写格式如下：<span class="symbol">*</span><span class="symbol">*</span></span><br></pre></td></tr></table></figure>
-<p>第一行hahaha<br>第二行6666<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**解析效果如下：**  </span><br><span class="line">第一行hahaha&lt;br/&gt;第二行<span class="number">6666</span></span><br><span class="line"></span><br><span class="line">#### <span class="number">2.10</span> 代码高亮</span><br><span class="line">使用栅栏标记代码块的一个好处是可以标明代码的语种，然后实现代码的高亮。</span><br><span class="line"></span><br><span class="line">**书写格式如下：**  </span><br><span class="line">&gt;\```ruby     </span><br><span class="line">    require <span class="string">'redcarpet'</span>  </span><br><span class="line">    markdown = Redcarpet.new(<span class="string">"Hello World!"</span>)  </span><br><span class="line">    puts markdown.to_html  </span><br><span class="line">\</span><br></pre></td></tr></table></figure></p>
-<p><strong>解析效果如下：</strong><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">require</span> <span class="string">'redcarpet'</span></span><br><span class="line">markdown = Redcarpet.new(<span class="string">"Hello World!"</span>)</span><br><span class="line">puts markdown.to_html</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-9-换行"><a href="#2-9-换行" class="headerlink" title="2.9 换行"></a>2.9 换行</h4><p>使用html标签<code>&lt;br/&gt;</code>、<code>&lt;br&gt;</code>换行</p>
+<p><strong>书写格式如下：</strong></p>
+<pre><code>第一行hahaha&lt;br/&gt;第二行6666
+</code></pre><p><strong>解析效果如下：</strong><br>第一行hahaha<br>第二行6666</p>
+<h4 id="2-10-代码高亮"><a href="#2-10-代码高亮" class="headerlink" title="2.10 代码高亮"></a>2.10 代码高亮</h4><p>使用栅栏标记代码块的一个好处是可以标明代码的语种，然后实现代码的高亮。</p>
+<p><strong>书写格式如下：</strong>  </p>
+<blockquote>
+<p>`<code>ruby     
+    require &#39;redcarpet&#39;  
+    markdown = Redcarpet.new(&quot;Hello World!&quot;)  
+    puts markdown.to_html  
+\`</code></p>
+</blockquote>
+<p><strong>解析效果如下：</strong>  </p>
+<pre><code class="ruby">require &#39;redcarpet&#39;
+markdown = Redcarpet.new(&quot;Hello World!&quot;)
+puts markdown.to_html
+</code></pre>
 <blockquote>
 <p>Markdown的语法规则参考官方文档</p>
 <ul>
@@ -926,7 +1042,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Markdown的优点"><span class="nav-number">1.</span> <span class="nav-text">1.Markdown的优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Markdown基本语法规则"><span class="nav-number">2.</span> <span class="nav-text">2. Markdown基本语法规则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-标题"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-加粗、斜体和删除线"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 加粗、斜体和删除线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-列表"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-引用"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 引用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#这是一个标题。"><span class="nav-number">3.</span> <span class="nav-text">这是一个标题。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-分割线"><span class="nav-number">3.1.</span> <span class="nav-text">2.5 分割线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-插入链接"><span class="nav-number">3.2.</span> <span class="nav-text">2.6 插入链接</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Markdown的优点"><span class="nav-number">1.</span> <span class="nav-text">1.Markdown的优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Markdown基本语法规则"><span class="nav-number">2.</span> <span class="nav-text">2. Markdown基本语法规则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-标题"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-加粗、斜体和删除线"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 加粗、斜体和删除线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-列表"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-引用"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 引用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#这是一个标题。"><span class="nav-number">3.</span> <span class="nav-text">这是一个标题。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-分割线"><span class="nav-number">3.1.</span> <span class="nav-text">2.5 分割线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-插入链接"><span class="nav-number">3.2.</span> <span class="nav-text">2.6 插入链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7-插入图片"><span class="nav-number">3.3.</span> <span class="nav-text">2.7 插入图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-8-表格"><span class="nav-number">3.4.</span> <span class="nav-text">2.8 表格</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-9-换行"><span class="nav-number">3.4.1.</span> <span class="nav-text">2.9 换行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-10-代码高亮"><span class="nav-number">3.4.2.</span> <span class="nav-text">2.10 代码高亮</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
