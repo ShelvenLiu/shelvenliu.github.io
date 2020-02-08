@@ -110,16 +110,16 @@
 
 
 
-<meta name="description" content="以梦为马，明日天涯">
+<meta name="description" content="Stay Hungry, Stay Foolish">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Shelven&#39;s Blog">
 <meta property="og:url" content="http://yoursite.com/categories/AL/index.html">
 <meta property="og:site_name" content="Shelven&#39;s Blog">
-<meta property="og:description" content="以梦为马，明日天涯">
+<meta property="og:description" content="Stay Hungry, Stay Foolish">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shelven&#39;s Blog">
-<meta name="twitter:description" content="以梦为马，明日天涯">
+<meta name="twitter:description" content="Stay Hungry, Stay Foolish">
 
 
 
@@ -190,7 +190,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">学无涯 知无涯</p>
+        <p class="site-subtitle">Coder</p>
       
   </div>
 
@@ -464,7 +464,7 @@
               <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="shelven">
             
               <p class="site-author-name" itemprop="name">shelven</p>
-              <p class="site-description motion-element" itemprop="description">以梦为马，明日天涯</p>
+              <p class="site-description motion-element" itemprop="description">Stay Hungry, Stay Foolish</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -565,7 +565,7 @@
       <div class="footer-inner">
         <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -818,12 +818,17 @@
 
 
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script src="//unjkp.com/valine/dist/Valine.min.js"></script>  
+  <script src="/js/src/Valine.min.js"></script>  
+
+    
+  
+  <script src="/js/src/Valine.min.js"></script>
   
   <script type="text/javascript">
     var GUEST = ['nick','mail','link'];
     var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
+    guest = guest.split(',').filter(function (item) {
       return GUEST.indexOf(item)>-1;
     });
     new Valine({
@@ -833,12 +838,18 @@
         appId: 'KilWhlbb2lAb49XX0GqMHLO2-gzGzoHsz',
         appKey: 'N9P9LomktiWpAwn0R8hIzWyq',
         placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
-        avatar:'mm',
-        guest_info:guest,
+        avatar:'mp',
+        guest_info:['nick'] ,  //评论者只需要提供评论的昵称即可
         pageSize:'10' || 10,
     });
+    //增加以下六行代码去除 power by valine
+    var infoEle = document.querySelector('#comments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0){
+      infoEle.childNodes.forEach(function(item) {
+        item.parentNode.removeChild(item);
+      });
+    }
   </script>
-
 
 
   
